@@ -19,7 +19,7 @@ class RegistryEntry(Item):
 
 class RegistrySpider(Spider):
     name = "registry"
-    allowed_domains = ["asdev.com.ua"]
+    allowed_domains = ["91.205.16.115"]
 
     def start_requests(self):
         now = datetime.datetime.now()
@@ -35,7 +35,7 @@ class RegistrySpider(Spider):
 
     def _build_request(self, region, year, month, page, invalidate_cache):
         return FormRequest(
-            url="http://asdev.com.ua/dabi/list.php?sort=num&order=DESC&page=%s" % page,
+            url="http://91.205.16.115/declarate/list.php?sort=num&order=DESC&page=%s" % page,
             formdata={
                 'filter[regob]': str(region),
                 'filter[date]': str(year),
