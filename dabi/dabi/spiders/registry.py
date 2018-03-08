@@ -25,7 +25,7 @@ class RegistrySpider(Spider):
         now = datetime.datetime.now()
 
         for region in range(1, 28) + [99]:
-            for year in range(2011, 2016):
+            for year in range(2017, 2018):
                 for month in range(1, 13):
                     invalidate = (year == now.year and month == now.month)
                     yield self._build_request(
